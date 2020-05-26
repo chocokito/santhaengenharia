@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Santha Engenharia</title>
+	<link rel="shortchut icon" href="icon.png">
+<style>
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+ 
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+ 
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+ 
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+.links{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	display: flex;
+}
+
+.links label{
+	padding: 10px 0;
+	flex-grow: 1;
+	cursor: pointer;
+	transition: all .4s;
+	text-align: center;
+	font-family: 'Arial';
+	font-size: 100%;
+	color: #000;
+	font-weight: bold;
+}
+
+.links label:hover{
+	background-color: rgba(000,000,000,.4); 
+}
+
+.scroll input{
+	display: none;
+}
+
+
+.form input{
+	display: flex;
+	margin: 0 auto;
+    	width: 30vw;
+	height: 3vh;
+	padding: 1em;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+}
+
+.form textarea{
+	display: flex;
+	margin: 0 auto;
+    	width: 30vw;
+	height: 10vh;
+	padding: 1em;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+	resize: none;
+}
+
+.form button{
+	display: flex;
+	margin: 0 auto;
+    	width: 5vw;
+	height: 3vh;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	position: fixed;
+	display: flex;
+	text-align: center;
+	font-family: 'Arial';
+	font-size: 100%;
+	color: #000;
+	font-weight: bold;
+	left: 20vw;
+	z-index: 10;
+}
+
+.bloco{
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.bloco img{
+	width: 100%;
+}
+
+#nodejs{
+	background-color: #FFF;
+}
+
+#bootstrap{
+	background-color: #AAA;
+}
+
+#sass{
+	background-color: #FFF;
+}
+
+#ruby{
+	background-color: #AAA;
+}
+
+.scroll{
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.sections{
+	transition: all .4s;
+}
+
+#rd_bootstrap:checked ~ .sections{
+	margin-top: -100vh;
+}
+
+#rd_bootstrap:checked ~ .scroll{
+	display: none;
+}
+
+#rd_sass:checked ~ .sections{
+	margin-top: -200vh;
+}
+
+#rd_ruby:checked ~ .sections{
+	margin-top: -300vh;
+}
+
+.footer {
+	position:absolute;
+	bottom: 20px;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	font-family: 'Arial';
+	font-size: 70%;
+	color: #000;
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<nav class="links">
+	<label for="rd_nodejs">In&iacutecio</label>
+	<label for="rd_bootstrap">Sobre n&oacutes</label>
+	<label for="rd_sass">Servi&ccedilos</label>
+	<label for="rd_ruby">Contato</label>
+	<label><a href="http://instagram.com/santhaengenharia" target="_blank">Instagram</a></label>
+</nav>
+
+<div class="scroll">
+	<input type="radio" name="grupo" id="rd_nodejs">
+	<input type="radio" name="grupo" id="rd_bootstrap">
+	<input type="radio" name="grupo" id="rd_sass">
+	<input type="radio" name="grupo" id="rd_ruby">
+
+<section class="sections">
+	<section class="bloco" id="nodejs"><img src="home.gif"></section>
+	<section class="bloco" id="bootstrap"><img src="about.png"></section>
+	<section class="bloco" id="sass"><img src="services.png"></section>
+	<section class="bloco" id="ruby">
+	<div class="form" id="teste">
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+	<input type="text" name="nome" width="300px" value="Nome" /></label>   
+  </p>
+  <p>
+    <label><input type="email" name="email" value="Seu Email" /></label>
+  </p>
+  <p>
+    <label><input type="text" name="telefone" value="Telefone (opcional)" /></label>
+  </p>
+  <p>
+    <label><textarea name="message">Descreva o produto ou serviço que está procurando!</textarea></label>
+  </p>
+  <p>
+    <button type="submit">Enviar</button>
+  </p>
+</form>
+	</div>
+	<img src="contact.png"></section>
+</section>
+
+</div>
+    <section class="footer">
+        &copy; 2020 - Desenvolvido por Lucas Santacatharina
+    </section>
+</body>
+</html>
