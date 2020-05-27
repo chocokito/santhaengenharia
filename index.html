@@ -36,6 +36,7 @@ a:active {
 	height: 50px;
 	position: fixed;
 	display: flex;
+	z-index: 3;
 }
 
 .links label{
@@ -67,6 +68,7 @@ a:active {
 	padding: 1em;
 	border: 1px solid #CCC;
 	border-radius: 1em;
+	opacity: 0.8;
 }
 
 .form textarea{
@@ -78,6 +80,7 @@ a:active {
 	border: 1px solid #CCC;
 	border-radius: 1em;
 	resize: none;
+	opacity: 0.8;
 }
 
 .form button{
@@ -109,10 +112,27 @@ a:active {
 	justify-content: center;
 	align-items: center;
 	display: flex;
+	z-index: 1;
 }
 
 .bloco img{
 	width: 100%;
+	z-index: 1;
+}
+
+.bg{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	z-index: 0;
+}
+
+.bg img{
+	width: 100%;
+	height: 100%;
 }
 
 #nodejs{
@@ -169,6 +189,7 @@ a:active {
 	font-size: 70%;
 	color: #000;
 	font-weight: bold;
+	z-index:20;
 }
 
 </style>
@@ -189,30 +210,36 @@ a:active {
 	<input type="radio" name="grupo" id="rd_ruby">
 
 <section class="sections">
-	<section class="bloco" id="nodejs"><img src="home.gif"></section>
-	<section class="bloco" id="bootstrap"><img src="about.png"></section>
-	<section class="bloco" id="sass"><img src="services.png"></section>
+	<section class="bloco" id="nodejs">
+		<img src="home.gif"></section>
+	<section class="bloco" id="bootstrap">
+		<div class="bg" id="about"><img src="bgabout.jpg"></div>
+		<img src="about.png"></section>
+	<section class="bloco" id="sass">
+		<div class="bg" id="services"><img src="bgservices.jpg"></div>
+		<img src="services.png"></section>
 	<section class="bloco" id="ruby">
 	<div class="form" id="teste">
 <form name="contact" method="POST" data-netlify="true">
   <p>
-	<input type="text" name="nome" width="300px" value="Nome" /></label>   
+	<input type="text" name="nome" width="300px" placeholder="Nome" /></label>   
   </p>
   <p>
-    <label><input type="email" name="email" value="Seu Email" /></label>
+    <label><input type="email" name="email" placeholder="Email Principal" /></label>
   </p>
   <p>
-    <label><input type="text" name="telefone" value="Telefone (opcional)" /></label>
+    <label><input type="text" name="telefone" placeholder="Telefone (opcional) - Com DDD" /></label>
   </p>
   <p>
-    <label><textarea name="message">Descreva o produto ou serviço que está procurando!</textarea></label>
+    <label><textarea name="message" placeholder="Descreva o produto ou serviço que está procurando!"></textarea></label>
   </p>
   <p>
     <button type="submit">Enviar</button>
   </p>
 </form>
 	</div>
-	<img src="contact.png"></section>
+			<div class="bg" id="contact"><img src="bgcontact.jpg"></div>
+			<img src="contact.png"></section>
 </section>
 
 </div>
